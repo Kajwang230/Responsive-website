@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New arrivals</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        .title {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h1 class="title">New arrivals</h1>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <img id="image1" src="toys/best-robots-e5ac252.jpg" alt="">
+            </div>
+            <div class="col-md-3">
+                <img id="image2" src="toys/images.jpg" alt="">
+            </div>
+            <div class="col-md-3">
+                <img id="image3" src="toys/crocs.jpg" alt="">
+            </div>
+            <div class="col-md-3">
+                <img id="image4" src="toys/images.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Array of image sources
+        var images = [
+            "toys/image1.jpg",
+            "toys/best-robots-e5ac252.jpg",
+            "toys/toy-trucks-for-kids-wooden-toys-Smiling-Tree-Toys_1200x.jpg",
+            "toys/images.jpg",
+            "toys/dynosour.jpg",
+            "toys/crocs.jpg",
+            "toys/toyGun.jpg"
+        ];
+
+        
+        function changeImages() {
+            for (var i = 0; i < 4; i++) {
+                var randomIndex = Math.floor(Math.random() * images.length);
+                document.getElementById("image" + (i + 1)).src = images[randomIndex];
+            }
+        }
+
+        
+        changeImages();
+
+        // Set interval to change images every 5 seconds (5000 milliseconds)
+        setInterval(changeImages, 5000);
+    </script>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

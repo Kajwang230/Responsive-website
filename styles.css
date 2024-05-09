@@ -1,0 +1,25 @@
+/* styles.css */
+body {
+    background-color: rgb(23, 117, 160); 
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+th {
+    background-color: #b2c220; 
+    padding: 10px; 
+}
+
+td {
+    width: 200px;
+    padding: 10px;
+}
+
+img {
+    display: block;
+    width: 200px; 
+    height: auto; 
+}
